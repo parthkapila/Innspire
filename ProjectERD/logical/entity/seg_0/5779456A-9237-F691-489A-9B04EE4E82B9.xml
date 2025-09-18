@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="780ACE33-32A8-3569-9FFD-2D2412765B44" name="CUSTOMER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5779456A-9237-F691-489A-9B04EE4E82B9" name="BOOKING">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-17 23:46:03 UTC</createdTime>
+<createdTime>2025-09-18 00:51:53 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -15,20 +15,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="CustomerID" id="5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50">
+<Attribute name="BookingID" id="12D175A6-E727-C475-75A9-F5F2B0BC1A09">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:57:18 UTC</createdTime>
+<createdTime>2025-09-18 00:58:41 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="FirstName" id="8B5A2A26-5A29-AF66-0DF5-7B74D7CEB326">
+<Attribute name="BookingDate" id="3926A08A-8647-6CA5-3128-D0227ACC343F">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:22 UTC</createdTime>
+<createdTime>2025-09-18 00:58:54 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -36,47 +35,38 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="LastName" id="DF0A4B16-3C3B-E480-9411-3650F0B069B4">
+<Attribute name="CustomerID" id="B3D00D1D-4AD4-AEBC-0FD0-754072DED4E4">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:26 UTC</createdTime>
+<createdTime>2025-09-18 01:45:26 UTC</createdTime>
+<generatorID>9D3C31E0-FEAC-774C-E614-053DE911E25C</generatorID>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Email" id="05BBF554-7C86-2C25-75B2-6A77C12B8159">
+<Attribute name="HostID" id="322C66E1-2E77-7653-4994-31D44FC9FB4F">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:29 UTC</createdTime>
+<createdTime>2025-09-18 01:45:33 UTC</createdTime>
+<generatorID>B2FD6E2C-FBE9-735D-90A7-A4944E70F59B</generatorID>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Phone" id="565AA12B-271A-90C4-2C58-8F70DFEEB977">
-<createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:31 UTC</createdTime>
-<ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CF37DA51-0412-F991-73F1-87929119A47F</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="58E82EDF-888D-3CD2-1C88-40B95C15DF9B" name="CUSTOMER PK">
+<identifier id="77FED16D-1D26-F81C-270D-DF62BC2D8013" name="BOOKING PK">
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-18 00:57:25 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
@@ -85,7 +75,9 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50</attributeRef>
+<attributeRef>12D175A6-E727-C475-75A9-F5F2B0BC1A09</attributeRef>
+<attributeRef>B3D00D1D-4AD4-AEBC-0FD0-754072DED4E4</attributeRef>
+<attributeRef>322C66E1-2E77-7653-4994-31D44FC9FB4F</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

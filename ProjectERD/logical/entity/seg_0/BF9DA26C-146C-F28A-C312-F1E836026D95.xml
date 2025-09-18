@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="780ACE33-32A8-3569-9FFD-2D2412765B44" name="CUSTOMER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF9DA26C-146C-F28A-C312-F1E836026D95" name="PROPERTY">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-17 23:46:03 UTC</createdTime>
+<createdTime>2025-09-18 00:53:38 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="CustomerID" id="5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50">
+<Attribute name="PropertyID" id="39617554-53C8-E318-4EE3-6148D97888FF">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:57:18 UTC</createdTime>
+<createdTime>2025-09-18 01:00:13 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -26,21 +26,20 @@
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="FirstName" id="8B5A2A26-5A29-AF66-0DF5-7B74D7CEB326">
+<Attribute name="Description" id="0DF8E309-CCA8-3C75-A6DB-D482EDB29F47">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:22 UTC</createdTime>
+<createdTime>2025-09-18 01:00:33 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="LastName" id="DF0A4B16-3C3B-E480-9411-3650F0B069B4">
+<Attribute name="BedroomNum" id="11F3116F-FC68-1C5A-420D-014E2D7C84D3">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:26 UTC</createdTime>
+<createdTime>2025-09-18 01:00:40 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -48,44 +47,21 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Email" id="05BBF554-7C86-2C25-75B2-6A77C12B8159">
-<createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:29 UTC</createdTime>
-<ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Phone" id="565AA12B-271A-90C4-2C58-8F70DFEEB977">
-<createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:31 UTC</createdTime>
-<ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="58E82EDF-888D-3CD2-1C88-40B95C15DF9B" name="CUSTOMER PK">
+<identifier id="3AC54234-0CCE-5DF7-5C60-B05CF4734ECE" name="PROPERTY PK">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:57:25 UTC</createdTime>
+<createdTime>2025-09-18 01:02:04 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50</attributeRef>
+<attributeRef>39617554-53C8-E318-4EE3-6148D97888FF</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
