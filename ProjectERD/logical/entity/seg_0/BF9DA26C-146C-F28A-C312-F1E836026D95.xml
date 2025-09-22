@@ -50,6 +50,19 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="BathroomNum" id="E0CB1675-B473-434F-ABFD-8C148B2D904C">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-18 14:35:01 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="3AC54234-0CCE-5DF7-5C60-B05CF4734ECE" name="PROPERTY PK">
