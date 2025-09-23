@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="13F3DBF2-D045-862D-8517-A6BA648A2B68" name="PROPERTY_AMENTITIES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77A9C779-6DAC-0814-66E5-FC1E1E48488F" name="AMENITIES">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:53:46 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -15,44 +15,47 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="PropertyID" id="3C326ED6-599F-6DB7-3EA0-182FD0C82AB0">
+<Attribute name="AmenitiesID" id="EC071285-76DA-5B9F-E37D-55A5A14C4B86">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 01:18:15 UTC</createdTime>
-<generatorID>08411A1E-06A6-D606-1A69-A448204A30CE</generatorID>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>44784D31-8194-DC67-78FE-FE538B7B5AB7</importedID>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<referedAttribute>39617554-53C8-E318-4EE3-6148D97888FF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="AmenitiesID" id="F943C930-E07A-F71B-C15C-FA803AA95955">
+<Attribute name="Name" id="D5611A2F-A2C0-E71F-38AC-15B1CCB6273E">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 01:18:21 UTC</createdTime>
-<generatorID>0589629A-58DD-C676-20FB-56988FFFADB8</generatorID>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>4E8ACCD7-53D7-7693-1158-AEB941DF32C0</importedID>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<referedAttribute>44784D31-8194-DC67-78FE-FE538B7B5AB7</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="3E827CA6-8A3E-8D5D-2C4C-55B39D4FB433" name="PROPERTY_AMENTITIES PK">
+<identifier id="5C063B27-7F01-089C-6DBB-5A045E24F3AA" name="AMENITIES PK">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 01:18:15 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>3C326ED6-599F-6DB7-3EA0-182FD0C82AB0</attributeRef>
-<attributeRef>F943C930-E07A-F71B-C15C-FA803AA95955</attributeRef>
+<attributeRef>EC071285-76DA-5B9F-E37D-55A5A14C4B86</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

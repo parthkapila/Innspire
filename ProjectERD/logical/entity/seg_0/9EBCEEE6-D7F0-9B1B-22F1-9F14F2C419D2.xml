@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5779456A-9237-F691-489A-9B04EE4E82B9" name="BOOKING">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9EBCEEE6-D7F0-9B1B-22F1-9F14F2C419D2" name="DATES_AVAILABLE">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:51:53 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
@@ -15,20 +15,41 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="BookingID" id="12D175A6-E727-C475-75A9-F5F2B0BC1A09">
+<Attribute name="DateID" id="55CB1B2A-5BB1-658C-B641-3FCABF36C25E">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:41 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>A12E08ED-B0E0-2D5B-4C77-4CEA5E64C10A</importedID>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ListingID" id="F24A6FC4-1D4D-6FB5-3E2D-88FF226BCABE">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>769B9205-4F9A-899D-B908-402D25DFE6EB</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>F4B881EF-7218-B704-A426-6F1A173DA3F6</importedID>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="BookingDate" id="3926A08A-8647-6CA5-3128-D0227ACC343F">
+<Attribute name="StartDate" id="A68D49BD-2E2A-025C-BF58-925225AFD32F">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:58:54 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>C602A863-0F3B-AEA0-04FD-DC901D0159FA</importedID>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
@@ -38,46 +59,32 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CustomerID" id="B3D00D1D-4AD4-AEBC-0FD0-754072DED4E4">
+<Attribute name="EndDate" id="40D2B29B-227A-D191-0E0F-62643DC7CF00">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 01:45:26 UTC</createdTime>
-<generatorID>9D3C31E0-FEAC-774C-E614-053DE911E25C</generatorID>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>20DA7C3B-2419-7EEA-43E8-1861536F31C7</importedID>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
-<referedAttribute>5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="HostID" id="322C66E1-2E77-7653-4994-31D44FC9FB4F">
-<createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 01:45:33 UTC</createdTime>
-<generatorID>B2FD6E2C-FBE9-735D-90A7-A4944E70F59B</generatorID>
-<ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
-<referedAttribute>CF37DA51-0412-F991-73F1-87929119A47F</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="77FED16D-1D26-F81C-270D-DF62BC2D8013" name="BOOKING PK">
+<identifier id="926FCCEC-FD86-5692-4B90-53E1DDF7D325" name="DATES_AVAILABLE PK">
 <createdBy>samanthagrief</createdBy>
-<createdTime>2025-09-18 00:57:25 UTC</createdTime>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
 <item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>12D175A6-E727-C475-75A9-F5F2B0BC1A09</attributeRef>
-<attributeRef>B3D00D1D-4AD4-AEBC-0FD0-754072DED4E4</attributeRef>
-<attributeRef>322C66E1-2E77-7653-4994-31D44FC9FB4F</attributeRef>
+<attributeRef>55CB1B2A-5BB1-658C-B641-3FCABF36C25E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
