@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4FC4D807-A078-2F53-87CA-E69D1AC1678E" name="DATES_AVAILABLE">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>9EBCEEE6-D7F0-9B1B-22F1-9F14F2C419D2</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DateID" id="3B6F3AF6-09CF-089E-DC44-F7F6E3C24C44">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>55CB1B2A-5BB1-658C-B641-3FCABF36C25E</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ListingID" id="465A566F-097B-0E95-DB91-D4AFF46D174A">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>F24A6FC4-1D4D-6FB5-3E2D-88FF226BCABE</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECF76CFC-00F5-4F33-59EB-B32538FFCF5F" referredColumn="EDC4FA0D-2DD0-7EE1-A8A9-CD64F3F3A440"/>
+</associations>
+</Column>
+<Column name="StartDate" id="B85AEC89-0419-2B1F-705B-499E587F784B">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>A68D49BD-2E2A-025C-BF58-925225AFD32F</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EndDate" id="09D55D4F-7C06-1C50-F424-77D2B2A6A922">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>40D2B29B-227A-D191-0E0F-62643DC7CF00</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="421C9767-7BBB-1541-157D-7F8379FF804A" name="DATES_AVAILABLE_PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>926FCCEC-FD86-5692-4B90-53E1DDF7D325</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B6F3AF6-09CF-089E-DC44-F7F6E3C24C44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A075C71F-F295-2763-4766-2DB68A474499" name="DATES_AVAILABLE_LISTING_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>769B9205-4F9A-899D-B908-402D25DFE6EB</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="465A566F-097B-0E95-DB91-D4AFF46D174A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

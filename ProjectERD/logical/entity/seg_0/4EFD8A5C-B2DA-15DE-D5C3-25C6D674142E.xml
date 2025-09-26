@@ -4,7 +4,7 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>2097FC6C-327A-21DC-A5FA-A05459261A4A</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -36,7 +36,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>5BE8A921-2225-F8A2-53EB-8E9E9DDF1784</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -52,7 +52,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>8606B8FF-2F0F-044E-A040-E3D1C851A998</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <referedAttribute>280C178D-FC66-8ED4-67E6-C893F77406B9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -67,14 +67,15 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>335C516C-56DB-1381-D0B6-AF62A63EEDF1</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Description" id="A16DE2FE-08F6-E1D1-A705-1C60FBBFB9DC">
 <createdBy>samanthagrief</createdBy>
@@ -82,7 +83,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>0F5AE67C-622A-C26C-9FA1-55E5A36AF18C</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -97,7 +98,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>3A5DD7B9-8D8F-E041-CE26-366A0B29AF8C</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -112,7 +113,7 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

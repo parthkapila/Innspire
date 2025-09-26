@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="115D0967-8FCE-C19E-511E-71D3B4A33A16" name="HOST">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>927F25A7-B661-63C4-062F-B62B627F07C1</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HostID" id="E281D285-32D1-0E81-C6FD-B65C6C766E29">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>F7D107DF-73EA-A55B-D2A4-015E59048AEC</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FirstName" id="9846CB6A-588C-1D79-1E52-81FED527BAB2">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>05EF31C7-B8C0-B1FA-5608-BADF04844C3A</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LastName" id="90290C7E-2D9B-0D1E-D57B-2E34654E0EEC">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>5E18DA53-2DED-123B-CF10-06F9375617A8</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="884B88BF-1022-87FD-4996-AC55AC0A892C">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>784F97E3-0CCC-48C6-6AB3-06D55B04C90A</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Phone" id="B43BBAFA-7904-DE73-03FF-32821171095A">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>29F705CE-706F-98E7-65B3-912B7AA740D0</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA893C4D-DA0A-4762-4031-FA34E4BEA0BF" name="HOST_PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-23 16:29:08 UTC</createdTime>
+<generatorID>F88AB91C-98D7-DC8D-E439-3FDBC9239D15</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E281D285-32D1-0E81-C6FD-B65C6C766E29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

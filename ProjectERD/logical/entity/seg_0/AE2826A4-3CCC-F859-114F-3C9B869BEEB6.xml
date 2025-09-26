@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE2826A4-3CCC-F859-114F-3C9B869BEEB6" name="CUSTOMER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE2826A4-3CCC-F859-114F-3C9B869BEEB6" name="CLIENT">
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>5AA5F0AD-8E31-BF6F-B1B6-506A2CF18C50</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -35,7 +35,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>8B5A2A26-5A29-AF66-0DF5-7B74D7CEB326</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -50,7 +50,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>DF0A4B16-3C3B-E480-9411-3650F0B069B4</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -65,7 +65,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>05BBF554-7C86-2C25-75B2-6A77C12B8159</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -81,7 +81,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>565AA12B-271A-90C4-2C58-8F70DFEEB977</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -96,7 +96,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>B3A4210B-642D-0242-CCCD-E56F20AFAD21</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -111,7 +111,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>D974A984-B5E2-ABEA-4126-DDFEDBCD0860</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -126,7 +126,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>B041A4E1-D107-95D8-1C5B-E0828D3FBF94</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -142,7 +142,7 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

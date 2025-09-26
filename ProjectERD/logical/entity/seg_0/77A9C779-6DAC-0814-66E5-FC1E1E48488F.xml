@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77A9C779-6DAC-0814-66E5-FC1E1E48488F" name="AMENITIES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77A9C779-6DAC-0814-66E5-FC1E1E48488F" name="AMENITY">
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>44784D31-8194-DC67-78FE-FE538B7B5AB7</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -35,7 +35,7 @@
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>4E8ACCD7-53D7-7693-1158-AEB941DF32C0</importedID>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -51,7 +51,7 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
