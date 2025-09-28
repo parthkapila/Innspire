@@ -69,7 +69,7 @@ CREATE TABLE listing (
     city          VARCHAR2(20),
     state         CHAR(2),
     address       VARCHAR2(40),
-    tite          VARCHAR2(50)
+    title         VARCHAR2(50)
 );
 
 ALTER TABLE listing ADD CONSTRAINT listing_pk PRIMARY KEY ( listingid );
@@ -134,7 +134,7 @@ INSERT INTO HOST VALUES ('H105', 'Julia', 'Cleary', 'jcleary@yahoo.com', '555-55
 INSERT INTO HOST VALUES ('H106', 'Jenn', 'Tovoii', 'jtovoii@yahoo.com', '666-666-6666');
 INSERT INTO HOST VALUES ('H107', 'Ernie', 'Tagilaboo', 'etagilaboo@yahoo.com', '777-777-7777');
 INSERT INTO HOST VALUES ('H108', 'Alisha', 'Bishop', 'abishop@yahoo.com', '888-888-8888');
-INSERT INTO HOST VALUES ('H109', 'Becky', 'Cavatappi', 'bcavatappi@yahoo.com', '999-999-999');
+INSERT INTO HOST VALUES ('H109', 'Becky', 'Cavatappi', 'bcavatappi@yahoo.com', '999-999-9999');
 INSERT INTO HOST VALUES ('H110', 'Winston', 'Schmidt', 'wscmidt@yahoo.com', '10-101-0101');
 INSERT INTO HOST VALUES ('H111', 'Bob', 'Day', 'bday@yahoo.com', '121-121-1212');
 INSERT INTO HOST VALUES ('H112', 'Bonnie', 'Miller', 'bmiller@yahoo.com', '131-131-1313');
@@ -147,7 +147,7 @@ INSERT INTO HOST VALUES ('H118', 'Abby', 'Day', 'aday@yahoo.com', '191-191-1919'
 INSERT INTO HOST VALUES ('H119', 'Ruth', 'Schmidt', 'rschmidt@yahoo.com', '202-202-2020');
 INSERT INTO HOST VALUES ('H120', 'Gavin', 'Schmidt', 'gschmidt@yahoo.com', '212-212-2121');
 INSERT INTO HOST VALUES ('H121', 'Aly', 'Nelson', 'anelson@yahoo.com', '232-232-2323');
-INSERT INTO HOST VALUES ('H122', 'Tanya', 'Lamontagne', 'tlamontagne@yahoo.com', '212-212-2121');
+INSERT INTO HOST VALUES ('H122', 'Tanya', 'Lamontagne', 'tlamontagne@yahoo.com', '213-213-2131');
 INSERT INTO HOST VALUES ('H123', 'Walt', 'Miller', 'wmiller@yahoo.com', '242-242-2424');
 INSERT INTO HOST VALUES ('H124', 'Elaine', 'Swift', 'eswift@yahoo.com', '252-252-2525');
 INSERT INTO HOST VALUES ('H125', 'May', 'Esperas', 'mesperas@yahoo.com', '262-262-2626');
@@ -216,13 +216,13 @@ INSERT INTO LISTING
 INSERT INTO LISTING
     VALUES
     ('L108', 'H120', TO_DATE('15-NOV-2024', 'DD-MON-YYYY'), 360, 
-    'This house is a MODERN Tiny home featured on the TV show "Modern Tiny Living". 20ft long, it features a kitchen, full bathroom, 1 lofted queen bed, 1 pullout queen bed and lounge area. This home is nestled in the woods on 5 acres of private property. There is a main house on this property which is part of Nashvilles country music royalty landmarks as it had recorded Dolly, George Jones, Tim Mcgraw, Lainey Wilson actually lived on the property for 3 years and many other established famous musicians. This tiny home is a private oasis from the hustle of Nashville. You will feel complete zen being tucked into the woods, while still only 10mins ($12 Uber) to Nashvilles downtown Honky Tonk district. Shopping, Restaurants, a gym, starbucks, mini golf, are all within minutes from this home. There is a lake and private beach only minutes from the Tiny House. If you have never experiences Tiny living, it is time for you to Try It Tiny.', 
+    'This house is a MODERN Tiny home featured on the TV show "Modern Tiny Living". 20ft long, it features a kitchen, full bathroom, 1 lofted queen bed, 1 pullout queen bed and lounge area. This home is nestled in the woods on 5 acres of private property. There is a main house on this property which is part of Nashville's country music royalty landmarks as it had recorded Dolly, George Jones, Tim Mcgraw, Lainey Wilson actually lived on the property for 3 years and many other established famous musicians. This tiny home is a private oasis from the hustle of Nashville. You will feel complete zen being tucked into the woods, while still only 10mins ($12 Uber) to Nashville's downtown Honky Tonk district. Shopping, Restaurants, a gym, Starbucks, mini golf, are all within minutes from this home. There is a lake and private beach only minutes from the Tiny House. If you have never experienced Tiny living, it is time for you to Try It Tiny.', 
     2, 1, 'Nashville', 'TN', '137 Teaticket Hwy', 'Famous Tiny Home from HGTV');
 INSERT INTO LISTING
     VALUES
     ('L109', 'H120', TO_DATE('09-AUG-2025', 'DD-MON-YYYY'), 681, 
-    'Welcome to The Music City! The peaceful Stolisma Studio is located in trendy Midtown Nashville, on the border of Downtown, Broadway, Music Row, The Parthenon, and Hillsboro Village. Our neighborhood features many chef-driven restaurants and bustling bars. It’s just moments from Vanderbilt Medical Center, Childrens Hospital, the VA Hospital, and Centennial Medical Complex. Its walkability and closeness to both downtown and other unique neighborhoods make it an exceptionally convenient area to stay in Nashville.', 
-    1, 1, 'Nashville', 'TV', '42 Fairhaven Commons Way', 'City Apt. | 8 mins. to Broadway, parking/gym/pool');
+    'Welcome to The Music City! The peaceful Stolisma Studio is located in trendy Midtown Nashville, on the border of Downtown, Broadway, Music Row, The Parthenon, and Hillsboro Village. Our neighborhood features many chef-driven restaurants and bustling bars. It’s just moments from Vanderbilt Medical Center, Children's Hospital, the VA Hospital, and Centennial Medical Complex. Its walkability and closeness to both downtown and other unique neighborhoods make it an exceptionally convenient area to stay in Nashville.', 
+    1, 1, 'Nashville', 'TN', '42 Fairhaven Commons Way', 'City Apt. | 8 mins. to Broadway, parking/gym/pool');
 INSERT INTO LISTING
     VALUES
     ('L110', 'H150', TO_DATE('19-FEB-2025', 'DD-MON-YYYY'), 1233, 
@@ -257,7 +257,7 @@ INSERT INTO LISTING
     VALUES
     ('L116', 'H121', TO_DATE('11-JAN-2025', 'DD-MON-YYYY'), 1144, 
     'This gorgeous cabin with all the comforts of home offers beautiful mountain views and an easy drive to the Smoky Mountains, Dollywood, or downtown Pigeon Forge. Perfect for a romantic getaway or a family retreat', 
-    2, 2, 'Piegon Forge', 'TN', '280 Washington Street', 'Couples getaway w/ hot tub, views, and king beds');
+    2, 2, 'Pigeon Forge', 'TN', '280 Washington Street', 'Couples getaway w/ hot tub, views, and king beds');
 INSERT INTO LISTING
     VALUES
     ('L117', 'H121', TO_DATE('26-MAR-2025', 'DD-MON-YYYY'), 206, 
@@ -649,7 +649,7 @@ INSERT INTO BOOKING VALUES ('B129','C006','L105',TO_DATE('21-JAN-2025', 'DD-MON-
 INSERT INTO BOOKING VALUES ('B130','C009','L112',TO_DATE('04-AUG-2025', 'DD-MON-YYYY'),
  'CARD',TO_DATE('04-SEP-2025', 'DD-MON-YYYY'),TO_DATE('08-SEP-2025', 'DD-MON-YYYY'));
 INSERT INTO BOOKING VALUES ('B131','C011','L128',TO_DATE('22-JUL-2024', 'DD-MON-YYYY'),
- 'CARD',TO_DATE('08-AUGUST-2024', 'DD-MON-YYYY'),TO_DATE('14-AUG-2024', 'DD-MON-YYYY'));
+ 'CARD',TO_DATE('08-AUG-2024', 'DD-MON-YYYY'),TO_DATE('14-AUG-2024', 'DD-MON-YYYY'));
 INSERT INTO BOOKING VALUES ('B132','C007','L145',TO_DATE('28-APR-2025', 'DD-MON-YYYY'),
  'CARD',TO_DATE('01-MAY-2025', 'DD-MON-YYYY'),TO_DATE('12-MAY-2025', 'DD-MON-YYYY'));
 INSERT INTO BOOKING VALUES ('B133','C034','L103',TO_DATE('14-SEP-2025', 'DD-MON-YYYY'),
@@ -689,7 +689,115 @@ INSERT INTO BOOKING VALUES ('B149','C016','L101',TO_DATE('15-MAR-2025', 'DD-MON-
 INSERT INTO BOOKING VALUES ('B150','C001','L123',TO_DATE('08-AUG-2025', 'DD-MON-YYYY'),
  'CHECK',TO_DATE('11-OCT-2025', 'DD-MON-YYYY'),TO_DATE('14-OCT-2025', 'DD-MON-YYYY'));
 
+--Review Table (Fixed - Only clients who actually booked the listings)
+
+INSERT INTO review VALUES ('R001', 'L112', 'C005', 4.5, 'Guest suite was perfect for my solo trip. Clean and comfortable.', TO_DATE('16-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R002', 'L102', 'C002', 4.8, 'Luxury hotel experience in the heart of Chicago. Highly recommend!', TO_DATE('13-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R003', 'L113', 'C024', 4.2, 'Fabulous views of the city! Great location for exploring LA.', TO_DATE('14-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R004', 'L150', 'C003', 5.0, 'Lake front home was perfect! Great for our group getaway.', TO_DATE('22-SEP-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R005', 'L102', 'C001', 4.7, 'Luxury hotel experience was amazing! Perfect for business travel.', TO_DATE('06-SEP-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R006', 'L147', 'C010', 4.9, 'Maine cottage was perfect! Ocean views and privacy were amazing.', TO_DATE('16-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R007', 'L108', 'C011', 4.3, 'Tiny home was adorable! Perfect for experiencing minimalist living.', TO_DATE('16-FEB-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R008', 'L114', 'C025', 4.6, 'Luxury penthouse with amazing amenities. Pool and jacuzzi were fantastic!', TO_DATE('08-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R009', 'L117', 'C040', 4.2, 'Luxe loft was nice but parking was a bit challenging.', TO_DATE('09-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R010', 'L129', 'C045', 4.8, 'Gatlinburg cabin was incredible! 6 bedrooms and amazing views.', TO_DATE('24-MAY-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R011', 'L138', 'C050', 4.1, 'Bozeman luxury was perfect! Modern design and great location.', TO_DATE('11-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R012', 'L112', 'C005', 4.5, 'Guest suite was perfect for my solo trip. Clean and comfortable.', TO_DATE('11-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R013', 'L113', 'C024', 4.3, 'Fabulous views of the city! Great location for exploring LA.', TO_DATE('14-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R014', 'L114', 'C025', 4.7, 'Luxury penthouse with amazing amenities. Pool and jacuzzi were fantastic!', TO_DATE('08-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R015', 'L115', 'C012', 4.6, 'Luxe room was perfect for my business trip. Great location near LAX.', TO_DATE('21-DEC-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R016', 'L104', 'C034', 4.8, 'Incredible experience knowing our stay helps the homeless. Beautiful room too!', TO_DATE('24-SEP-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R017', 'L117', 'C040', 4.2, 'Luxe loft was nice but parking was a bit challenging.', TO_DATE('09-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R018', 'L101', 'C032', 4.9, 'Amazing cabin experience! Perfect for a romantic getaway.', TO_DATE('16-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R019', 'L119', 'C048', 4.7, 'Desert villa was incredible! Pool and hot tub with desert views were amazing.', TO_DATE('21-MAY-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R020', 'L120', 'C013', 4.5, 'A-Frame cabin was beautiful and well-designed. Hot tub was perfect!', TO_DATE('02-JAN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R021', 'L145', 'C023', 4.8, 'Desert Airstream was unique! Mountain views and firepit were great.', TO_DATE('01-MAR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R022', 'L122', 'C012', 4.6, 'Luxury mountain home was spectacular! Views were breathtaking.', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R023', 'L123', 'C001', 4.9, 'Malibu retreat was absolutely perfect! Ocean views and infinity pool were incredible.', TO_DATE('15-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R024', 'L132', 'C008', 4.7, 'Luxury lodge was perfect! Hot tub and panoramic views were amazing.', TO_DATE('29-APR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R025', 'L125', 'C016', 4.4, 'Beach house was great! Pool and beach access were perfect for our family.', TO_DATE('08-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R026', 'L126', 'C008', 4.8, 'Paradiso estate was incredible! Private and luxurious with amazing amenities.', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R027', 'L127', 'C019', 4.5, 'Oceanfront condo was perfect! Beach access and views were amazing.', TO_DATE('09-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R028', 'L128', 'C019', 4.6, 'Truckee rental was perfect for our ski trip! Hot tub and mountain views were great.', TO_DATE('02-NOV-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R029', 'L129', 'C045', 4.9, 'Gatlinburg cabin was incredible! 6 bedrooms and amazing views.', TO_DATE('24-MAY-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R030', 'L130', 'C007', 4.7, 'Starry night cabin was perfect! Hot tub and mountain views were magical.', TO_DATE('05-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R031', 'L131', 'C016', 4.8, 'Park City chateau was incredible! Perfect for our large group ski trip.', TO_DATE('08-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R032', 'L132', 'C008', 4.6, 'Luxury lodge was perfect! Hot tub and panoramic views were amazing.', TO_DATE('29-APR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R033', 'L133', 'C031', 4.9, 'Beach front home was incredible! Private beach and pool were perfect.', TO_DATE('22-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R034', 'L134', 'C016', 4.5, 'Coachella Valley home was perfect! Pool and hot tub were great.', TO_DATE('08-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R035', 'L135', 'C018', 4.7, 'Michiana Shores was perfect! Pool and lake access were amazing.', TO_DATE('16-MAR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R036', 'L136', 'C035', 4.8, 'Hollywood Hills home was incredible! City views and amenities were perfect.', TO_DATE('01-NOV-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R037', 'L137', 'C043', 4.4, 'Blue Valley Chalet was perfect for our ski trip! Modern and comfortable.', TO_DATE('17-NOV-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R038', 'L138', 'C050', 4.6, 'Bozeman luxury was perfect! Modern design and great location.', TO_DATE('19-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R039', 'L139', 'C018', 4.9, 'Mountain top home was incredible! Views and design were spectacular.', TO_DATE('16-MAR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R040', 'L140', 'C016', 4.5, 'Seacrest Beach home was perfect! Beach access and amenities were great.', TO_DATE('08-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R041', 'L141', 'C047', 4.7, 'Malibu retreat was perfect! Ocean views and privacy were amazing.', TO_DATE('06-AUG-2024', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R042', 'L142', 'C016', 4.3, 'Jackson condo was nice! Mountain views were beautiful.', TO_DATE('08-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R043', 'L143', 'C010', 4.8, 'Waterfront retreat was incredible! Ocean views and dock were perfect.', TO_DATE('11-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R044', 'L144', 'C007', 4.9, 'Seattle luxury home was incredible! Skyline views and amenities were perfect.', TO_DATE('05-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R045', 'L145', 'C023', 4.4, 'Desert Airstream was unique! Mountain views and firepit were great.', TO_DATE('01-MAR-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R046', 'L146', 'C010', 4.2, 'Cowboy bunkhouse was fun! Unique experience in Scottsdale.', TO_DATE('11-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R047', 'L147', 'C010', 4.6, 'Maine cottage was perfect! Ocean views and privacy were amazing.', TO_DATE('11-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R048', 'L148', 'C050', 4.3, 'Farm cottage was rustic but fun! Unique experience in Maine.', TO_DATE('19-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R049', 'L149', 'C001', 4.7, 'Geodome was incredible! Secluded and unique experience.', TO_DATE('15-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO review VALUES ('R050', 'L150', 'C017', 4.5, 'Lake front home was perfect! Great for our group getaway.', TO_DATE('10-OCT-2025', 'DD-MON-YYYY'));
+
+--Dates Available Table
+
+INSERT INTO dates_available VALUES ('D001', 'L101', TO_DATE('01-MAR-2025', 'DD-MON-YYYY'), TO_DATE('31-MAR-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D002', 'L102', TO_DATE('01-APR-2025', 'DD-MON-YYYY'), TO_DATE('30-APR-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D003', 'L103', TO_DATE('01-MAY-2025', 'DD-MON-YYYY'), TO_DATE('31-MAY-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D004', 'L104', TO_DATE('01-JUN-2025', 'DD-MON-YYYY'), TO_DATE('30-JUN-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D005', 'L105', TO_DATE('01-JUL-2025', 'DD-MON-YYYY'), TO_DATE('31-JUL-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D006', 'L106', TO_DATE('01-AUG-2025', 'DD-MON-YYYY'), TO_DATE('31-AUG-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D007', 'L107', TO_DATE('01-SEP-2025', 'DD-MON-YYYY'), TO_DATE('30-SEP-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D008', 'L108', TO_DATE('01-OCT-2025', 'DD-MON-YYYY'), TO_DATE('31-OCT-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D009', 'L109', TO_DATE('01-NOV-2025', 'DD-MON-YYYY'), TO_DATE('30-NOV-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D010', 'L110', TO_DATE('01-DEC-2025', 'DD-MON-YYYY'), TO_DATE('31-DEC-2025', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D011', 'L111', TO_DATE('01-JAN-2026', 'DD-MON-YYYY'), TO_DATE('31-JAN-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D012', 'L112', TO_DATE('01-FEB-2026', 'DD-MON-YYYY'), TO_DATE('28-FEB-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D013', 'L113', TO_DATE('01-MAR-2026', 'DD-MON-YYYY'), TO_DATE('31-MAR-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D014', 'L114', TO_DATE('01-APR-2026', 'DD-MON-YYYY'), TO_DATE('30-APR-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D015', 'L115', TO_DATE('01-MAY-2026', 'DD-MON-YYYY'), TO_DATE('31-MAY-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D016', 'L116', TO_DATE('01-JUN-2026', 'DD-MON-YYYY'), TO_DATE('30-JUN-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D017', 'L117', TO_DATE('01-JUL-2026', 'DD-MON-YYYY'), TO_DATE('31-JUL-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D018', 'L118', TO_DATE('01-AUG-2026', 'DD-MON-YYYY'), TO_DATE('31-AUG-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D019', 'L119', TO_DATE('01-SEP-2026', 'DD-MON-YYYY'), TO_DATE('30-SEP-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D020', 'L120', TO_DATE('01-OCT-2026', 'DD-MON-YYYY'), TO_DATE('31-OCT-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D021', 'L121', TO_DATE('01-NOV-2026', 'DD-MON-YYYY'), TO_DATE('30-NOV-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D022', 'L122', TO_DATE('01-DEC-2026', 'DD-MON-YYYY'), TO_DATE('31-DEC-2026', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D023', 'L123', TO_DATE('01-JAN-2027', 'DD-MON-YYYY'), TO_DATE('31-JAN-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D024', 'L124', TO_DATE('01-FEB-2027', 'DD-MON-YYYY'), TO_DATE('28-FEB-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D025', 'L125', TO_DATE('01-MAR-2027', 'DD-MON-YYYY'), TO_DATE('31-MAR-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D026', 'L126', TO_DATE('01-APR-2027', 'DD-MON-YYYY'), TO_DATE('30-APR-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D027', 'L127', TO_DATE('01-MAY-2027', 'DD-MON-YYYY'), TO_DATE('31-MAY-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D028', 'L128', TO_DATE('01-JUN-2027', 'DD-MON-YYYY'), TO_DATE('30-JUN-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D029', 'L129', TO_DATE('01-JUL-2027', 'DD-MON-YYYY'), TO_DATE('31-JUL-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D030', 'L130', TO_DATE('01-AUG-2027', 'DD-MON-YYYY'), TO_DATE('31-AUG-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D031', 'L131', TO_DATE('01-SEP-2027', 'DD-MON-YYYY'), TO_DATE('30-SEP-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D032', 'L132', TO_DATE('01-OCT-2027', 'DD-MON-YYYY'), TO_DATE('31-OCT-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D033', 'L133', TO_DATE('01-NOV-2027', 'DD-MON-YYYY'), TO_DATE('30-NOV-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D034', 'L134', TO_DATE('01-DEC-2027', 'DD-MON-YYYY'), TO_DATE('31-DEC-2027', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D035', 'L135', TO_DATE('01-JAN-2028', 'DD-MON-YYYY'), TO_DATE('31-JAN-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D036', 'L136', TO_DATE('01-FEB-2028', 'DD-MON-YYYY'), TO_DATE('29-FEB-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D037', 'L137', TO_DATE('01-MAR-2028', 'DD-MON-YYYY'), TO_DATE('31-MAR-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D038', 'L138', TO_DATE('01-APR-2028', 'DD-MON-YYYY'), TO_DATE('30-APR-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D039', 'L139', TO_DATE('01-MAY-2028', 'DD-MON-YYYY'), TO_DATE('31-MAY-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D040', 'L140', TO_DATE('01-JUN-2028', 'DD-MON-YYYY'), TO_DATE('30-JUN-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D041', 'L141', TO_DATE('01-JUL-2028', 'DD-MON-YYYY'), TO_DATE('31-JUL-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D042', 'L142', TO_DATE('01-AUG-2028', 'DD-MON-YYYY'), TO_DATE('31-AUG-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D043', 'L143', TO_DATE('01-SEP-2028', 'DD-MON-YYYY'), TO_DATE('30-SEP-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D044', 'L144', TO_DATE('01-OCT-2028', 'DD-MON-YYYY'), TO_DATE('31-OCT-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D045', 'L145', TO_DATE('01-NOV-2028', 'DD-MON-YYYY'), TO_DATE('30-NOV-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D046', 'L146', TO_DATE('01-DEC-2028', 'DD-MON-YYYY'), TO_DATE('31-DEC-2028', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D047', 'L147', TO_DATE('01-JAN-2029', 'DD-MON-YYYY'), TO_DATE('31-JAN-2029', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D048', 'L148', TO_DATE('01-FEB-2029', 'DD-MON-YYYY'), TO_DATE('28-FEB-2029', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D049', 'L149', TO_DATE('01-MAR-2029', 'DD-MON-YYYY'), TO_DATE('31-MAR-2029', 'DD-MON-YYYY'));
+INSERT INTO dates_available VALUES ('D050', 'L150', TO_DATE('01-APR-2029', 'DD-MON-YYYY'), TO_DATE('30-APR-2029', 'DD-MON-YYYY'));
+
 SELECT COUNT(*) AS CLIENT_COUNT FROM client;
 SELECT COUNT(*) AS AMENITTY_COUNT FROM amenity;
 SELECT COUNT(*) AS LISTING_AMENITY_COUNT FROM LISTING_AMENITY;
-SELECT COUNT(*) AS BOOKIN_COUNT FROM BOOKING;
+SELECT COUNT(*) AS BOOKING_COUNT FROM BOOKING;
+SELECT COUNT(*) AS REVIEW_COUNT FROM review;
+SELECT COUNT(*) AS DATES_AVAILABLE_COUNT FROM dates_available;
