@@ -86,7 +86,7 @@ CREATE TABLE review (
     reviewid    CHAR(4) NOT NULL,
     listingid   CHAR(4) NOT NULL,
     customerid  CHAR(4) NOT NULL,
-    rating      NUMBER(2, 2),
+    rating      NUMBER(2, 1),
     description VARCHAR2(500),
     dateposted  DATE
 );
@@ -125,7 +125,7 @@ ALTER TABLE review
     ADD CONSTRAINT review_listing_fk FOREIGN KEY ( listingid )
         REFERENCES listing ( listingid );
 
---Host Table
+--host table
 INSERT INTO HOST VALUES ('H101', 'Jessica', 'Day', 'jday@yahoo.com', '333-333-3333');
 INSERT INTO HOST VALUES ('H102', 'Nick', 'Miller', 'nmiller@yahoo.com', '111-111-1111');
 INSERT INTO HOST VALUES ('H103', 'Regan', 'Lucas', 'rlucas@yahoo.com', '222-222-2222');
@@ -177,7 +177,7 @@ INSERT INTO HOST VALUES ('H148', 'Olivia', 'Munn', 'omunn@yahoo.com', '515-515-5
 INSERT INTO HOST VALUES ('H149', 'Justin','Watt', 'jwatt@yahoo.com', '525-525-5252');
 INSERT INTO HOST VALUES ('H150', 'Clayton', 'Kershaw', 'ckershaw@yahoo.com', '535-535-5353');
 
---Listing Table
+--listing table
 INSERT INTO LISTING
     VALUES
     ('L101', 'H101', TO_DATE('01-JAN-2025', 'DD-MON-YYYY'), 206, 
@@ -216,12 +216,12 @@ INSERT INTO LISTING
 INSERT INTO LISTING
     VALUES
     ('L108', 'H120', TO_DATE('15-NOV-2024', 'DD-MON-YYYY'), 360, 
-    'This house is a MODERN Tiny home featured on the TV show "Modern Tiny Living". 20ft long, it features a kitchen, full bathroom, 1 lofted queen bed, 1 pullout queen bed and lounge area. This home is nestled in the woods on 5 acres of private property. There is a main house on this property which is part of Nashville's country music royalty landmarks as it had recorded Dolly, George Jones, Tim Mcgraw, Lainey Wilson actually lived on the property for 3 years and many other established famous musicians. This tiny home is a private oasis from the hustle of Nashville. You will feel complete zen being tucked into the woods, while still only 10mins ($12 Uber) to Nashville's downtown Honky Tonk district. Shopping, Restaurants, a gym, Starbucks, mini golf, are all within minutes from this home. There is a lake and private beach only minutes from the Tiny House. If you have never experienced Tiny living, it is time for you to Try It Tiny.', 
+    'This house is a MODERN Tiny home featured on the TV show Modern Tiny Living. 20ft long, it features a kitchen, full bathroom, 1 lofted queen bed, 1 pullout queen bed and lounge area. This home is nestled in the woods on 5 acres of private property. There is a main house on this property which is part of Nashvilles country music royalty landmarks as it had recorded Dolly, George Jones, Tim Mcgraw, Lainey Wilson actually lived on the property for 3 years and many other established famous musicians. This tiny home is a private oasis from the hustle of Nashville. You will feel complete zen being tucked into the woods, while still only 10mins ($12 Uber) to Nashville''s downtown Honky Tonk district. Shopping, Restaurants, a gym, Starbucks, mini golf, are all within minutes from this home. There is a lake and private beach only minutes from the Tiny House. If you have never experienced Tiny living, it is time for you to Try It Tiny.', 
     2, 1, 'Nashville', 'TN', '137 Teaticket Hwy', 'Famous Tiny Home from HGTV');
 INSERT INTO LISTING
     VALUES
     ('L109', 'H120', TO_DATE('09-AUG-2025', 'DD-MON-YYYY'), 681, 
-    'Welcome to The Music City! The peaceful Stolisma Studio is located in trendy Midtown Nashville, on the border of Downtown, Broadway, Music Row, The Parthenon, and Hillsboro Village. Our neighborhood features many chef-driven restaurants and bustling bars. It’s just moments from Vanderbilt Medical Center, Children's Hospital, the VA Hospital, and Centennial Medical Complex. Its walkability and closeness to both downtown and other unique neighborhoods make it an exceptionally convenient area to stay in Nashville.', 
+    'Welcome to The Music City! The peaceful Stolisma Studio is located in trendy Midtown Nashville, on the border of Downtown, Broadway, Music Row, The Parthenon, and Hillsboro Village. Our neighborhood features many chef-driven restaurants and bustling bars. It is just moments from Vanderbilt Medical Center, Children''s Hospital, the VA Hospital, and Centennial Medical Complex. Its walkability and closeness to both downtown and other unique neighborhoods make it an exceptionally convenient area to stay in Nashville.', 
     1, 1, 'Nashville', 'TN', '42 Fairhaven Commons Way', 'City Apt. | 8 mins. to Broadway, parking/gym/pool');
 INSERT INTO LISTING
     VALUES
