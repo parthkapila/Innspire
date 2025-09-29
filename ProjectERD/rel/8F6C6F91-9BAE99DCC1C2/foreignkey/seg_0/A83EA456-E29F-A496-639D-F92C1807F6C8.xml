@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A83EA456-E29F-A496-639D-F92C1807F6C8" containerWithKeyObject="0668F26B-9891-7A62-BD6B-4CFF768049B1" localFKIndex="21DE13F0-F1D2-B2B5-9E49-EC3A7A435DE5" name="DATES_AVAILABLE_LISTING_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>769B9205-4F9A-899D-B908-402D25DFE6EB</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<referredTableLongName>LISTING</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E2E1E5A3-4871-B5CE-2F2A-222CFDFDBE38</referredTableID>
+<keyObject>0434E813-E500-6382-701A-EC1E79DA65FF</keyObject>
+<referredKeyID>0434E813-E500-6382-701A-EC1E79DA65FF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ListingID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
