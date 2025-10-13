@@ -3,9 +3,6 @@
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -20,9 +17,6 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>12D175A6-E727-C475-75A9-F5F2B0BC1A09</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -35,15 +29,12 @@
 <generatorID>773971E6-12CA-EA4F-065B-5C4E284CD6FD</generatorID>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>0E57ADDF-03AD-9718-1472-1D496E2A8F30</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <referedAttribute>280C178D-FC66-8ED4-67E6-C893F77406B9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ListingID" id="305AE4A6-3F85-D7BE-ACB9-9A19630582A9">
 <createdBy>samanthagrief</createdBy>
@@ -51,24 +42,18 @@
 <generatorID>232624CD-EE36-E8B1-063B-144EF4C885F7</generatorID>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>ADED93D1-3467-71D3-8BCA-DD6658DEDB85</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="BookingDate" id="D95C9AE5-8B1C-81E0-4658-3C632EB5F877">
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>3926A08A-8647-6CA5-3128-D0227ACC343F</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -78,12 +63,9 @@
 <Attribute name="PaymentMethod" id="1F4CDF6F-2CD0-0A01-6F07-51F0B85DD9D3">
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
-<notes><![CDATA[can be: Credit Card, Debit Card, Apple Pay, or PayPal]]></notes>
+<notes><![CDATA[can be: Credit Card, Debit Card, Apple Pay, PayPal, or Google Pay]]></notes>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>92AD22ED-8B5C-11E5-1BE5-660AAE55C34E</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -96,9 +78,6 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>77BB644D-B65B-3F06-5262-8E608893DE7A</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -110,9 +89,6 @@
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
 <importedID>CF79E7D8-2096-6374-19FE-53FCD663CCB6</importedID>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -125,9 +101,6 @@
 <createdBy>samanthagrief</createdBy>
 <createdTime>2025-09-22 22:34:08 UTC</createdTime>
 <ownerDesignName>ProjectERD</ownerDesignName>
-<engineerTo>
-<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>ED999674-CE9D-FDAF-9D5A-D57CF324EB54</attributeRef>
