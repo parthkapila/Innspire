@@ -425,7 +425,7 @@ BEGIN
     IF NOT IS_ID_VALID(P_AMENITYID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid amenity id, please use the format A### where A is a capitalized character');
     ELSIF NOT IS_ID_VALID(P_LISTINGID) THEN
-        RAISE_APPLICATION_ERROR(-20111,  'invalid amenity id, please use the format A### where A is a capitalized character');
+        RAISE_APPLICATION_ERROR(-20111,  'invalid listing id, please use the format A### where A is a capitalized character');
     END IF;
     
     INSERT INTO LISTING_AMENITY VALUES(P_AMENITYID, P_LISTINGID);
