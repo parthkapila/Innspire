@@ -446,3 +446,147 @@ EXCEPTION
         END IF;
 END;
 /
+--------------------------------------------------------------------------------
+-- READ OPERATIONS
+-- Purpose: Implement Read and Search functions for Listings, Clients, and Reviews
+--------------------------------------------------------------------------------
+SET SERVEROUTPUT ON;
+
+/*
+Procedure: GET_LISTING_DETAILS
+Displays full listing information given a listing ID.
+Uses validation and exception handling.
+*/
+CREATE OR REPLACE PROCEDURE GET_LISTING_DETAILS (
+    P_LISTINGID IN VARCHAR2
+)
+AS
+    V_LISTING LISTING%ROWTYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_LISTINGID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid listing ID format. Use A### where A is a capitalized character.');
+    END IF;
+
+    SELECT * INTO V_LISTING
+    FROM LISTING
+    WHERE LISTINGID = P_LISTINGID;
+
+    DBMS_OUTPUT.PUT_LINE('Listing ID: ' || V_LISTING.LISTINGID);
+    DBMS_OUTPUT.PUT_LINE('Title: ' || V_LISTING.TITLE);
+    DBMS_OUTPUT.PUT_LINE('City: ' || V_LISTING.CITY);
+    DBMS_OUTPUT.PUT_LINE('State: ' || V_LISTING.STATE);
+    DBMS_OUTPUT.PUT_LINE('Price per Night: $' || V_LISTING.PRICEPERNIGHT);
+    DBMS_OUTPUT.PUT_LINE('Description: ' || V_LISTING.DESCRIPTION);
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No listing found with ID: ' || P_LISTINGID);
+    WHEN VALUE_ERROR THEN
+        DBMS_OUTPUT.PUT_LINE('Invalid data type encountered.');
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
+END;
+/
+
+/*
+Procedure: SEARCH_LISTINGS_BY_CITY
+Displays all listings in a given city using a CURSOR FOR loop.
+*/
+CREATE OR REPLACE PROCEDURE SEARCH_LISTINGS_BY_CITY (
+    P_CITY IN VARCHAR2
+)
+AS
+BEGIN
+    FOR R IN (
+        SELECT LISTINGID, TITLE, PRICEPERNIGHT, STATE
+        FROM LISTING
+        WHERE UPPER(CITY) = UPPER(TRIM(P_CITY))
+        ORDER BY PRICEPERNIGHT
+    )
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('Listing ID: ' || R.LISTINGID || 
+                             ', Title: ' || R.TITLE ||
+                             ', Price per Night: $' || R.PRICEPERNIGHT ||
+                             ', State: ' || R.STATE);
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('End of listings for city: ' || P_CITY);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No listings found in the specified city.');
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
+END;
+/
+
+/*
+Procedure: SEARCH_LISTINGS_BY_PRICE_RANGE
+Uses an explicit cursor to find listings between two price values.
+Demonstrates use of WHILE LOOP and explicit cursor control.
+*/
+CREATE OR REPLACE PROCEDURE SEARCH_LISTINGS_BY_PRICE_RANGE (
+    P_MIN_PRICE IN NUMBER,
+    P_MAX_PRICE IN NUMBER
+)
+AS
+    CURSOR C_LISTINGS IS
+        SELECT LISTINGID, TITLE, CITY, STATE, PRICEPERNIGHT
+        FROM LISTING
+        WHERE PRICEPERNIGHT BETWEEN P_MIN_PRICE AND P_MAX_PRICE
+        ORDER BY PRICEPERNIGHT;
+    V_REC C_LISTINGS%ROWTYPE;
+BEGIN
+    OPEN C_LISTINGS;
+    LOOP
+        FETCH C_LISTINGS INTO V_REC;
+        EXIT WHEN C_LISTINGS%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE('[' || V_REC.LISTINGID || '] ' ||
+                             V_REC.TITLE || ' - $' || V_REC.PRICEPERNIGHT ||
+                             ' (' || V_REC.CITY || ', ' || V_REC.STATE || ')');
+    END LOOP;
+    CLOSE C_LISTINGS;
+
+    DBMS_OUTPUT.PUT_LINE('Search completed for price range: ' || P_MIN_PRICE || ' - ' || P_MAX_PRICE);
+EXCEPTION
+    WHEN VALUE_ERROR THEN
+        DBMS_OUTPUT.PUT_LINE('Invalid numeric input for price range.');
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
+END;
+/
+
+/*
+Procedure: SEARCH_REVIEWS_BY_RATING
+Displays reviews matching a given minimum rating using CASE and loops.
+*/
+CREATE OR REPLACE PROCEDURE SEARCH_REVIEWS_BY_RATING (
+    P_MIN_RATING IN NUMBER
+)
+AS
+BEGIN
+    FOR R IN (
+        SELECT REVIEWID, CUSTOMERID, LISTINGID, RATING, DESCRIPTION
+        FROM REVIEW
+        WHERE RATING >= P_MIN_RATING
+        ORDER BY RATING DESC
+    )
+    LOOP
+        CASE 
+            WHEN R.RATING = 5 THEN
+                DBMS_OUTPUT.PUT_LINE('***** ' || R.DESCRIPTION);
+            WHEN R.RATING >= 3 THEN
+                DBMS_OUTPUT.PUT_LINE('*** ' || R.DESCRIPTION);
+            ELSE
+                DBMS_OUTPUT.PUT_LINE('* Low rating - ' || R.DESCRIPTION);
+        END CASE;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Displayed all reviews with rating >= ' || P_MIN_RATING);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No reviews found with rating above ' || P_MIN_RATING);
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
+END;
+/
