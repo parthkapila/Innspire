@@ -28,7 +28,7 @@ CREATE OR REPLACE FUNCTION IS_EMAIL_VALID (P_INPUT IN VARCHAR2)
     RETURN BOOLEAN
 AS
 BEGIN
-    IF REGEXP_LIKE(P_INPUT, '[A-Za-z0-9]@[A-Za-z0-9]') THEN
+    IF REGEXP_LIKE(P_INPUT, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$') THEN
         RETURN TRUE;
     END IF;
     RETURN FALSE;
@@ -77,7 +77,7 @@ BEGIN
             RETURN TRUE;
         WHEN 'CHECK' THEN
             RETURN TRUE;
-        WHEN 'APPLE PLAY' THEN
+        WHEN 'APPLE PAY' THEN
             RETURN TRUE;
         WHEN 'PAYPAL' THEN
             RETURN TRUE;
@@ -604,10 +604,17 @@ BEGIN
     UPDATE HOST
     SET FIRSTNAME = P_HFIRSTNAME
     WHERE HOSTID = P_HID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('HOSTID ' || P_HID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Host first name updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('HOSTID ' || P_HID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating host: ' || SQLERRM);
 END;
 /
 
@@ -618,10 +625,17 @@ BEGIN
     UPDATE HOST
     SET LASTNAME = P_HLASTNAME
     WHERE HOSTID = P_HID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('HOSTID ' || P_HID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Host last name updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('HOSTID ' || P_HID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating host: ' || SQLERRM);
 END;
 /
 
@@ -632,10 +646,17 @@ BEGIN
     UPDATE HOST
     SET EMAIL = P_HEMAIL
     WHERE HOSTID = P_HID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('HOSTID ' || P_HID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Host email updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('HOSTID ' || P_HID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating host: ' || SQLERRM);
 END;
 /
 
@@ -646,10 +667,17 @@ BEGIN
     UPDATE HOST
     SET PHONE = P_HPHONE
     WHERE HOSTID = P_HID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('HOSTID ' || P_HID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Host phone updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('HOSTID ' || P_HID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating host: ' || SQLERRM);
 END;
 /
 
@@ -664,10 +692,17 @@ BEGIN
     UPDATE CLIENT
     SET FIRSTNAME = P_CFIRSTNAME
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client first name updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -678,10 +713,17 @@ BEGIN
     UPDATE CLIENT
     SET LASTNAME = P_CLASTNAME
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client last name updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -692,10 +734,17 @@ BEGIN
     UPDATE CLIENT
     SET EMAIL = P_CEMAIL
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client email updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -706,10 +755,17 @@ BEGIN
     UPDATE CLIENT
     SET PHONE = P_CPHONE
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client phone updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -720,10 +776,17 @@ BEGIN
     UPDATE CLIENT
     SET ADDRESS = P_CADDR
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client address updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -734,10 +797,17 @@ BEGIN
     UPDATE CLIENT
     SET CITY = P_CCITY
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client city updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -748,10 +818,17 @@ BEGIN
     UPDATE CLIENT
     SET STATE = P_CSTATE
     WHERE CUSTOMERID = P_CID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('CLIENTID ' || P_CID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Client state updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('CLIENTID ' || P_CID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating client: ' || SQLERRM);
 END;
 /
 
@@ -766,10 +843,17 @@ BEGIN
     UPDATE LISTING
     SET PRICEPERNIGHT = P_LPRICE
     WHERE LISTINGID = P_LID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('LISTINGID ' || P_LID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Listing price updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('LISTINGID ' || P_LID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating listing: ' || SQLERRM);
 END;
 /
 
@@ -780,10 +864,17 @@ BEGIN
     UPDATE LISTING
     SET DESCRIPTION = P_LDESC
     WHERE LISTINGID = P_LID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('LISTINGID ' || P_LID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Listing description updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('LISTINGID ' || P_LID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating listing: ' || SQLERRM);
 END;
 /
 
@@ -794,10 +885,17 @@ BEGIN
     UPDATE LISTING
     SET TITLE = P_LTITLE
     WHERE LISTINGID = P_LID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('LISTINGID ' || P_LID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Listing title updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('LISTINGID ' || P_LID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating listing: ' || SQLERRM);
 END;
 /
 
@@ -812,10 +910,17 @@ BEGIN
     UPDATE DATES_AVAILABLE
     SET STARTDATE = P_DSTARTDATE
     WHERE LISTINGID = P_LID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('LISTINGID ' || P_LID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Start date updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('LISTINGID ' || P_LID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating start date: ' || SQLERRM);
 END;
 /
 
@@ -824,12 +929,19 @@ CREATE OR REPLACE PROCEDURE UPDATE_DATESAVAIL_ENDDATE
 AS
 BEGIN
     UPDATE DATES_AVAILABLE
-    SET STARTDATE = P_DENDDATE
+    SET ENDDATE = P_DENDDATE
     WHERE LISTINGID = P_LID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('LISTINGID ' || P_LID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('End date updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('LISTINGID ' || P_LID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating end date: ' || SQLERRM);
 END;
 /
 
@@ -844,10 +956,17 @@ BEGIN
     UPDATE REVIEW
     SET RATING = P_RRATING
     WHERE REVIEWID = P_RID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('REVIEWID ' || P_RID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Review rating updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('REVIEWID ' || P_RID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating review: ' || SQLERRM);
 END;
 /
 
@@ -858,10 +977,17 @@ BEGIN
     UPDATE REVIEW
     SET DESCRIPTION = P_RDESC
     WHERE REVIEWID = P_RID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('REVIEWID ' || P_RID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Review description updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('REVIEWID ' || P_RID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating review: ' || SQLERRM);
 END;
 /
 
@@ -872,10 +998,17 @@ BEGIN
     UPDATE REVIEW
     SET DATEPOSTED = P_RDATE
     WHERE REVIEWID = P_RID;
-    COMMIT;
+    
+    IF SQL%ROWCOUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('REVIEWID ' || P_RID || ' is not found.');
+    ELSE
+        COMMIT;
+        DBMS_OUTPUT.PUT_LINE('Review date posted updated successfully.');
+    END IF;
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE ('REVIEWID ' || P_RID || ' is not found.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error updating review: ' || SQLERRM);
 END;
 /
 
