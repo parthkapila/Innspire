@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F2D16382-C67D-D0A8-BCB4-7E65DCC37C45" name="REVIEW">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>4EFD8A5C-B2DA-15DE-D5C3-25C6D674142E</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ReviewID" id="EB021228-418B-7DAF-6045-87561C5A4D73">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>0C7C3351-88CC-FCBE-2E70-3376DBE24C92</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ListingID" id="7C0E39A4-ECEC-1776-0B04-0A10D763F24D">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>6C5B5A84-9D8F-9100-499B-477F726D8C91</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63ACA7A5-CD83-422E-E6D6-51DFD5B47CB6" referredColumn="AE30A2E7-187D-B94A-0540-105264CA739C"/>
+</associations>
+</Column>
+<Column name="CustomerID" id="051A08E4-B94A-FCC2-D164-3A1DF0FCF06B">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>FFE7D4DD-4A1F-03C9-B4CB-B8F9FD825E2A</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BD9DB9AE-C132-B836-2B77-AD5E0AC2847C" referredColumn="0AD52090-6A97-F3CD-C36E-E18FD3478309"/>
+</associations>
+</Column>
+<Column name="Rating" id="75A9A006-6FC5-3B1F-C553-01411C8F30EA">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>550799B6-6EAF-3990-EE17-3801D0FC79A0</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="9010037C-E155-2E77-F404-2C33F7145BE3">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>A16DE2FE-08F6-E1D1-A705-1C60FBBFB9DC</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DatePosted" id="07CFA3A4-34DA-53A6-0EAD-4E15347AF74E">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>415327A0-1F74-B908-9CBE-4289B4FBC435</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="51CA734D-FC14-9E5D-6403-42F12444C3A1" name="REVIEW_PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>ACC957F3-F05A-FE62-3F4C-4F8F6B490E4D</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB021228-418B-7DAF-6045-87561C5A4D73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A726970-8A29-6D81-14B1-7ABB55A8813C" name="REVIEW_LISTING_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>3F47FD40-EE4A-37B5-F956-CEB9DC0EA5B3</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C0E39A4-ECEC-1776-0B04-0A10D763F24D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5747BEBC-52EA-170C-55E8-2DC312E611EF" name="REVIEW_CLIENT_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>DBE056D0-E449-6DB7-5546-ACDBC685516D</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="051A08E4-B94A-FCC2-D164-3A1DF0FCF06B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

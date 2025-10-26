@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E562DE95-A2DA-D044-A1C6-787E9F443E1D" containerWithKeyObject="66E39A7D-58EC-67E8-2578-D100EDC9825A" localFKIndex="24D61CD4-CCF5-ADB5-06A9-329B62FD084A" name="LISTING_AMENITY_AMENITY_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>6D3D717C-55D2-7F0B-0F35-8989FFD0DFC7</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<referredTableLongName>AMENITY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>60D693CD-1BA8-DE53-433E-87B2D91FD4F7</referredTableID>
+<keyObject>529E0B7B-4896-E17D-9177-886210574377</keyObject>
+<referredKeyID>529E0B7B-4896-E17D-9177-886210574377</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AmenitiesID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

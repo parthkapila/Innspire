@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB74D620-F8C0-C620-C2F1-04ABDE73BBFE" name="BOOKING">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>3A5DB66A-E512-EEA3-F1F4-1CB07BA78D35</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BookingID" id="0D2E1DAE-D6C9-0130-DC20-9637410288D2">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>ED999674-CE9D-FDAF-9D5A-D57CF324EB54</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CustomerID" id="9D70F2EB-F484-9383-4C31-A34677CECFDB">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>80C4AECA-00B0-D54B-FBA0-639C51960411</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6323C31A-E40B-6C22-94B7-59785F07EDD1" referredColumn="0AD52090-6A97-F3CD-C36E-E18FD3478309"/>
+</associations>
+</Column>
+<Column name="ListingID" id="016692C2-C989-C8FE-3F75-A52D9F49D643">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>305AE4A6-3F85-D7BE-ACB9-9A19630582A9</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AAFB4C43-6CA1-B49A-C04E-09FE639AD8A8" referredColumn="AE30A2E7-187D-B94A-0540-105264CA739C"/>
+</associations>
+</Column>
+<Column name="BookingDate" id="26DDD1A2-36B2-C6FB-002D-EBCA30E06873">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>D95C9AE5-8B1C-81E0-4658-3C632EB5F877</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PaymentMethod" id="D02894B6-76EE-20EE-1648-BE8ACCA8A276">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>1F4CDF6F-2CD0-0A01-6F07-51F0B85DD9D3</generatorID>
+<notes><![CDATA[can be: Credit Card, Debit Card, Apple Pay, or PayPal]]></notes>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="StartDate" id="F0FBCA3C-9A5B-A8CA-479D-8FFB18252342">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>4C49D701-7F17-87DB-4B56-2601D723928D</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EndDate" id="D29187FB-F151-93A1-0BBC-3F5DFA47EE00">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>A3A62B52-0089-E5AC-446F-5CA18C40EF63</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B3713C1-2A56-78C9-64DF-2503BC82ABAE" name="BOOKING_PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>88B0F7A0-9715-3C6C-FB41-A1913A64B203</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D2E1DAE-D6C9-0130-DC20-9637410288D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA928A78-C013-994E-232B-8623BDC69B10" name="BOOKING_CLIENT_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>773971E6-12CA-EA4F-065B-5C4E284CD6FD</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D70F2EB-F484-9383-4C31-A34677CECFDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EB6290B-8E05-318E-68C6-09E34BEA80E0" name="BOOKING_LISTING_FK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>232624CD-EE36-E8B1-063B-144EF4C885F7</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="016692C2-C989-C8FE-3F75-A52D9F49D643"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

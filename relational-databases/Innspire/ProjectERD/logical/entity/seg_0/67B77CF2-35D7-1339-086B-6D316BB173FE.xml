@@ -1,0 +1,198 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="67B77CF2-35D7-1339-086B-6D316BB173FE" name="LISTING">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ListingID" id="191C8D84-62C7-85BB-3526-7ADFB92459A4">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>BA28812C-9E10-B0B4-5FE0-FED8EF6A351C</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="HostID" id="3B35EAF6-D7BA-5690-C187-F2B29A8A1E7F">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>29438AAC-4F0E-2107-C52E-CD4753BA05B2</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>14C03B11-63BF-85F9-9C5F-F05B359095F8</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<referedAttribute>F7D107DF-73EA-A55B-D2A4-015E59048AEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DatePosted" id="2204B0FA-61CB-4F1D-BEFD-6131A6C5B60C">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>CA5F5A8F-5D73-977E-7558-F8E930824E9D</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PricePerNight" id="F3FF0DAD-0436-B13B-D6F9-47F7D15DE935">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>F8BA8945-82CD-ED22-B52E-8CAB72FBF106</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Description" id="B607348D-A3C5-51F5-9BA3-C8452CD5E2B9">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>3C28EF60-DE21-88B8-D107-41F7E8135FAA</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BedroomNum" id="50E8AA51-06AE-DA39-66E2-0F7E1A70BB40">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>BA65F919-EC89-9B07-A363-898A08EC9874</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BathroomNum" id="690F800A-76DB-C004-1B46-9B288EDCAD5F">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>0C10242C-0B0B-EBF4-1B52-1E32FDE5A0B3</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+</Attribute>
+<Attribute name="City" id="F979AEA2-2A12-6E1C-B6F0-739A194140B4">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>29A06CF5-27EE-4B7C-5A44-3D2C66F80494</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="State" id="F0482292-5AF4-63E3-B77F-C4FE426C37CC">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>4949DF2D-92FC-2994-0948-038BCA2D4B95</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Address" id="3299A6EC-5F5D-2721-6F6E-A862055E604A">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>55A6B8AA-739A-02EA-8137-B8A4477FACA6</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Title" id="BCD0E94D-2A87-3A9B-E39D-EB8207020F06">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-25 02:34:18 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="41E4CE6B-240E-5B4C-C39F-74B0E436C254" name="LISTING PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>191C8D84-62C7-85BB-3526-7ADFB92459A4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
