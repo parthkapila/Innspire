@@ -2,7 +2,7 @@ SET SERVEROUTPUT ON;
 
 /*
 
-checks the format for phone number and ensures its in the formate ###-###=####
+checks the format for phone number and ensures its in the formatok ###-###=####
 
 */
 
@@ -1013,3 +1013,260 @@ END;
 /
 
 -- End Updates
+
+--------------------------------------------------------------------------------
+-- DELETE OPERATIONS
+--------------------------------------------------------------------------------
+
+/*
+Procedure: DELETE_BOOKING
+Deletes a booking record by BookingID.
+Includes validation and exception handling.
+*/
+
+CREATE OR REPLACE PROCEDURE DELETE_BOOKING
+(P_BOOKINGID IN VARCHAR2)
+AS
+    V_CUSTOMERID BOOKING.CUSTOMERID%TYPE;
+    V_LISTINGID BOOKING.LISTINGID%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_BOOKINGID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid booking ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM BOOKING
+        WHERE BOOKINGID = P_BOOKINGID
+        RETURNING CUSTOMERID, LISTINGID INTO V_CUSTOMERID, V_LISTINGID;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Booking ' || P_BOOKINGID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Booking ' || P_BOOKINGID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: Customer ' || V_CUSTOMERID || ', Listing ' || V_LISTINGID);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting booking: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_REVIEW
+(P_REVIEWID IN VARCHAR2)
+AS
+    V_CUSTOMERID REVIEW.CUSTOMERID%TYPE;
+    V_LISTINGID REVIEW.LISTINGID%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_REVIEWID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid review ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM REVIEW
+        WHERE REVIEWID = P_REVIEWID
+        RETURNING CUSTOMERID, LISTINGID INTO V_CUSTOMERID, V_LISTINGID;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Review ' || P_REVIEWID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Review ' || P_REVIEWID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: Customer ' || V_CUSTOMERID || ', Listing ' || V_LISTINGID);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting review: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_DATES_AVAILABLE
+(P_DATEID IN VARCHAR2)
+AS
+    V_LISTINGID DATES_AVAILABLE.LISTINGID%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_DATEID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid date ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM DATES_AVAILABLE
+        WHERE DATEID = P_DATEID
+        RETURNING LISTINGID INTO V_LISTINGID;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Date ' || P_DATEID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Date ' || P_DATEID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: Listing ' || V_LISTINGID);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting dates_available: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_LISTING_AMENITY
+(P_AMENITYID IN VARCHAR2, P_LISTINGID IN VARCHAR2)
+AS
+    V_AID LISTING_AMENITY.AMENITIESID%TYPE;
+    V_LID LISTING_AMENITY.LISTINGID%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_AMENITYID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid amenity ID, please use the format A### where A is a capitalized character');
+    ELSIF NOT IS_ID_VALID(P_LISTINGID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid listing ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM LISTING_AMENITY
+        WHERE AMENITIESID = P_AMENITYID AND LISTINGID = P_LISTINGID
+        RETURNING AMENITIESID, LISTINGID INTO V_AID, V_LID;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Listing_amenity (' || P_AMENITYID || ', ' || P_LISTINGID || ') not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Listing_amenity (' || P_AMENITYID || ', ' || P_LISTINGID || ') deleted successfully.');
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting listing_amenity: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_CLIENT
+(P_CUSTOMERID IN VARCHAR2)
+AS
+    V_FIRSTNAME CLIENT.FIRSTNAME%TYPE;
+    V_LASTNAME CLIENT.LASTNAME%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_CUSTOMERID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid customer ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM CLIENT
+        WHERE CUSTOMERID = P_CUSTOMERID
+        RETURNING FIRSTNAME, LASTNAME INTO V_FIRSTNAME, V_LASTNAME;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Client ' || P_CUSTOMERID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Client ' || P_CUSTOMERID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: ' || V_FIRSTNAME || ' ' || V_LASTNAME);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting client: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_LISTING
+(P_LISTINGID IN VARCHAR2)
+AS
+    V_HOSTID LISTING.HOSTID%TYPE;
+    V_TITLE LISTING.TITLE%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_LISTINGID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid listing ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM LISTING
+        WHERE LISTINGID = P_LISTINGID
+        RETURNING HOSTID, TITLE INTO V_HOSTID, V_TITLE;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Listing ' || P_LISTINGID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Listing ' || P_LISTINGID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: Host ' || V_HOSTID || ', Title ' || V_TITLE);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting listing: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_AMENITY
+(P_AMENITYID IN VARCHAR2)
+AS
+    V_NAME AMENITY.NAME%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_AMENITYID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid amenity ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM AMENITY
+        WHERE AMENITIESID = P_AMENITYID
+        RETURNING NAME INTO V_NAME;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Amenity ' || P_AMENITYID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Amenity ' || P_AMENITYID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: ' || V_NAME);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting amenity: ' || SQLERRM);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE DELETE_HOST
+(P_HOSTID IN VARCHAR2)
+AS
+    V_FIRSTNAME HOST.FIRSTNAME%TYPE;
+    V_LASTNAME HOST.LASTNAME%TYPE;
+BEGIN
+    IF NOT IS_ID_VALID(P_HOSTID) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'Invalid host ID, please use the format A### where A is a capitalized character');
+    END IF;
+
+    BEGIN
+        DELETE FROM HOST
+        WHERE HOSTID = P_HOSTID
+        RETURNING FIRSTNAME, LASTNAME INTO V_FIRSTNAME, V_LASTNAME;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Host ' || P_HOSTID || ' not found. No records deleted.');
+            RETURN;
+    END;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Host ' || P_HOSTID || ' deleted successfully.');
+    DBMS_OUTPUT.PUT_LINE('Details: ' || V_FIRSTNAME || ' ' || V_LASTNAME);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error deleting host: ' || SQLERRM);
+END;
+/
