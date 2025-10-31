@@ -139,8 +139,6 @@ CREATE OR REPLACE PROCEDURE CREATE_CLIENT
  P_CITY VARCHAR2, 
  P_STATE VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
     
 BEGIN
     IF NOT IS_ID_VALID(P_CUSTOMERID) THEN
@@ -157,13 +155,11 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         END IF;
 END;
 /
@@ -183,8 +179,6 @@ CREATE OR REPLACE PROCEDURE CREATE_BOOKING
  P_STARTDATE IN VARCHAR2, 
  P_ENDDATE IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_BOOKINGID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid booking id, please use the format A### where A is a capitalized character');
@@ -204,13 +198,11 @@ BEGIN
     INSERT INTO BOOKING VALUES(P_BOOKINGID, P_CUSTOMERID, P_LISTINGID, TO_DATE(P_BOOKINGDATE, 'DD-MON-YYYY'), UPPER(TRIM(P_PAYMENTMETHOD)), TO_DATE(P_STARTDATE, 'DD-MON-YYYY'), TO_DATE(P_ENDDATE, 'DD-MON-YYYY'));
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSIF SQLCODE = -02291 THEN
             DBMS_OUTPUT.PUT_LINE('invalid foreign key, please enter an existing foreign key');
         ELSE
@@ -234,8 +226,6 @@ CREATE OR REPLACE PROCEDURE CREATE_REVIEW
  P_DESCRIPTION IN REVIEW.DESCRIPTION%TYPE,
  P_DATEPOSTED IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_REVIEWID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid review id, please use the format A### where A is a capitalized character');
@@ -252,15 +242,13 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('success');
     
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN INVALID_NUMBER THEN
         DBMS_OUTPUT.PUT_LINE('invalid number entered');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSIF SQLCODE = -02291 THEN
             DBMS_OUTPUT.PUT_LINE('invalid foreign key, please enter an existing foreign key');
         ELSE
@@ -276,8 +264,6 @@ CREATE OR REPLACE PROCEDURE CREATE_HOST
  P_EMAIL IN VARCHAR2,
  P_PHONE IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_HOSTID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid host id, please use the format A### where A is a capitalized character');
@@ -291,13 +277,11 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSE
             DBMS_OUTPUT.PUT_LINE(SQLERRM);
         END IF;
@@ -317,8 +301,6 @@ CREATE OR REPLACE PROCEDURE CREATE_LISTING
  P_ADDRESS IN VARCHAR2,
  P_TITLE IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_LISTINGID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid listing id, please use the format A### where A is a capitalized character');
@@ -334,13 +316,11 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSIF SQLCODE = -02291 THEN
             DBMS_OUTPUT.PUT_LINE('invalid foreign key, please enter an existing foreign key');
         ELSE
@@ -355,30 +335,26 @@ CREATE OR REPLACE PROCEDURE CREATE_DATES_AVAILABLE
  P_STARTDATE IN VARCHAR2,
  P_ENDDATE IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_DATEID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid date id, please use the format A### where A is a capitalized character');
     ELSIF NOT IS_ID_VALID(P_LISTINGID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid listing id, please use the format A### where A is a capitalized character');
     ELSIF NOT IS_DATE_VALID(P_STARTDATE) THEN
-        RAISE_APPLICATION_ERROR(-20111,  'invalid start posted');
+        RAISE_APPLICATION_ERROR(-20111,  'invalid start date');
     ELSIF NOT IS_DATE_VALID(P_ENDDATE) THEN
-        RAISE_APPLICATION_ERROR(-20111,  'invalid end posted');
+        RAISE_APPLICATION_ERROR(-20111,  'invalid end date');
     END IF;
     
     INSERT INTO DATES_AVAILABLE VALUES(P_DATEID, P_LISTINGID, TO_DATE(P_STARTDATE, 'DD-MON-YYYY'), TO_DATE(P_ENDDATE, 'DD-MON-YYYY'));
 
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSIF SQLCODE = -02291 THEN
             DBMS_OUTPUT.PUT_LINE('invalid foreign key, please enter an existing foreign key');
         ELSE
@@ -391,8 +367,6 @@ CREATE OR REPLACE PROCEDURE CREATE_AMENITY
 (P_AMENITYID IN VARCHAR2,
  P_NAME IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_AMENITYID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid amenity id, please use the format A### where A is a capitalized character');
@@ -402,13 +376,11 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSE
             DBMS_OUTPUT.PUT_LINE(SQLERRM);
         END IF;
@@ -419,8 +391,6 @@ CREATE OR REPLACE PROCEDURE CREATE_LISTING_AMENITY
 (P_AMENITYID IN VARCHAR2,
  P_LISTINGID IN VARCHAR2)
 AS
-    INVALID_INPUT EXCEPTION;
-    PRAGMA EXCEPTION_INIT(INVALID_INPUT, -20111);
 BEGIN  
     IF NOT IS_ID_VALID(P_AMENITYID) THEN
         RAISE_APPLICATION_ERROR(-20111,  'invalid amenity id, please use the format A### where A is a capitalized character');
@@ -432,13 +402,11 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('success');
 EXCEPTION
-    WHEN INVALID_INPUT THEN
-        DBMS_OUTPUT.PUT_LINE(SQLERRM);
     WHEN DUP_VAL_ON_INDEX THEN
         DBMS_OUTPUT.PUT_LINE('primary key has already been used, please use a different one');
     WHEN OTHERS THEN
         IF SQLCODE = -12899 THEN
-            DBMS_OUTPUT.PUT_LINE('inputted string to large');
+            DBMS_OUTPUT.PUT_LINE('inputted string too large');
         ELSIF SQLCODE = -02291 THEN
             DBMS_OUTPUT.PUT_LINE('invalid foreign key, please enter an existing foreign key');
         ELSE
@@ -496,6 +464,7 @@ CREATE OR REPLACE PROCEDURE SEARCH_LISTINGS_BY_CITY (
     P_CITY IN VARCHAR2
 )
 AS
+    V_COUNT NUMBER := 0;
 BEGIN
     FOR R IN (
         SELECT LISTINGID, TITLE, PRICEPERNIGHT, STATE
@@ -508,12 +477,15 @@ BEGIN
                              ', Title: ' || R.TITLE ||
                              ', Price per Night: $' || R.PRICEPERNIGHT ||
                              ', State: ' || R.STATE);
+        V_COUNT := V_COUNT + 1;
     END LOOP;
 
-    DBMS_OUTPUT.PUT_LINE('End of listings for city: ' || P_CITY);
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
+    IF V_COUNT = 0 THEN
         DBMS_OUTPUT.PUT_LINE('No listings found in the specified city.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('End of listings for city: ' || P_CITY);
+    END IF;
+EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
 END;
@@ -537,13 +509,12 @@ AS
     V_REC C_LISTINGS%ROWTYPE;
 BEGIN
     OPEN C_LISTINGS;
-    LOOP
-        FETCH C_LISTINGS INTO V_REC;
-        EXIT WHEN C_LISTINGS%NOTFOUND;
-
+    FETCH C_LISTINGS INTO V_REC;
+    WHILE C_LISTINGS%FOUND LOOP
         DBMS_OUTPUT.PUT_LINE('[' || V_REC.LISTINGID || '] ' ||
                              V_REC.TITLE || ' - $' || V_REC.PRICEPERNIGHT ||
                              ' (' || V_REC.CITY || ', ' || V_REC.STATE || ')');
+        FETCH C_LISTINGS INTO V_REC;
     END LOOP;
     CLOSE C_LISTINGS;
 
@@ -564,6 +535,7 @@ CREATE OR REPLACE PROCEDURE SEARCH_REVIEWS_BY_RATING (
     P_MIN_RATING IN NUMBER
 )
 AS
+    V_COUNT NUMBER := 0;
 BEGIN
     FOR R IN (
         SELECT REVIEWID, CUSTOMERID, LISTINGID, RATING, DESCRIPTION
@@ -580,12 +552,15 @@ BEGIN
             ELSE
                 DBMS_OUTPUT.PUT_LINE('* Low rating - ' || R.DESCRIPTION);
         END CASE;
+        V_COUNT := V_COUNT + 1;
     END LOOP;
 
-    DBMS_OUTPUT.PUT_LINE('Displayed all reviews with rating >= ' || P_MIN_RATING);
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
+    IF V_COUNT = 0 THEN
         DBMS_OUTPUT.PUT_LINE('No reviews found with rating above ' || P_MIN_RATING);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Displayed all reviews with rating >= ' || P_MIN_RATING);
+    END IF;
+EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
 END;
@@ -643,6 +618,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_HOST_EMAIL
 (P_HID IN CHAR, P_HEMAIL IN VARCHAR2)
 AS
 BEGIN
+    IF NOT IS_EMAIL_VALID(P_HEMAIL) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid email');
+    END IF;
     UPDATE HOST
     SET EMAIL = P_HEMAIL
     WHERE HOSTID = P_HID;
@@ -664,6 +642,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_HOST_PHONE
 (P_HID IN CHAR, P_HPHONE IN CHAR)
 AS
 BEGIN
+    IF NOT IS_PHONE_VALID(P_HPHONE) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid phone number, please use the ###-###-#### format');
+    END IF;
     UPDATE HOST
     SET PHONE = P_HPHONE
     WHERE HOSTID = P_HID;
@@ -731,6 +712,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_CLIENT_EMAIL
 (P_CID IN CHAR, P_CEMAIL IN VARCHAR2)
 AS
 BEGIN
+    IF NOT IS_EMAIL_VALID(P_CEMAIL) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid email');
+    END IF;
     UPDATE CLIENT
     SET EMAIL = P_CEMAIL
     WHERE CUSTOMERID = P_CID;
@@ -752,6 +736,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_CLIENT_PHONE
 (P_CID IN CHAR, P_CPHONE IN CHAR)
 AS
 BEGIN
+    IF NOT IS_PHONE_VALID(P_CPHONE) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid phone number, please use the ###-###-#### format');
+    END IF;
     UPDATE CLIENT
     SET PHONE = P_CPHONE
     WHERE CUSTOMERID = P_CID;
@@ -815,6 +802,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_CLIENT_STATE
 (P_CID IN CHAR, P_CSTATE IN CHAR)
 AS
 BEGIN
+    IF NOT IS_STATE_VALID(P_CSTATE) THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid state, please use the AA format where A is a capitalized character');
+    END IF;
     UPDATE CLIENT
     SET STATE = P_CSTATE
     WHERE CUSTOMERID = P_CID;
@@ -840,6 +830,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_LISTING_PRICEPERNIGHT
 (P_LID IN CHAR, P_LPRICE IN NUMBER)
 AS
 BEGIN
+    IF P_LPRICE IS NULL OR P_LPRICE < 0 THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid price, must be a non-negative number');
+    END IF;
     UPDATE LISTING
     SET PRICEPERNIGHT = P_LPRICE
     WHERE LISTINGID = P_LID;
@@ -953,6 +946,9 @@ CREATE OR REPLACE PROCEDURE UPDATE_REVIEW_RATING
 (P_RID IN CHAR, P_RRATING IN NUMBER)
 AS
 BEGIN
+    IF P_RRATING IS NULL OR P_RRATING < 0 OR P_RRATING > 5 THEN
+        RAISE_APPLICATION_ERROR(-20111, 'invalid rating, must be between 0 and 5');
+    END IF;
     UPDATE REVIEW
     SET RATING = P_RRATING
     WHERE REVIEWID = P_RID;
