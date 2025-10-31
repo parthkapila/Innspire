@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4EFD8A5C-B2DA-15DE-D5C3-25C6D674142E" name="REVIEW">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ReviewID" id="0C7C3351-88CC-FCBE-2E70-3376DBE24C92">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>2097FC6C-327A-21DC-A5FA-A05459261A4A</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ListingID" id="6C5B5A84-9D8F-9100-499B-477F726D8C91">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>3F47FD40-EE4A-37B5-F956-CEB9DC0EA5B3</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>5BE8A921-2225-F8A2-53EB-8E9E9DDF1784</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CustomerID" id="FFE7D4DD-4A1F-03C9-B4CB-B8F9FD825E2A">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>DBE056D0-E449-6DB7-5546-ACDBC685516D</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>8606B8FF-2F0F-044E-A040-E3D1C851A998</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<referedAttribute>280C178D-FC66-8ED4-67E6-C893F77406B9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rating" id="550799B6-6EAF-3990-EE17-3801D0FC79A0">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>335C516C-56DB-1381-D0B6-AF62A63EEDF1</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Description" id="A16DE2FE-08F6-E1D1-A705-1C60FBBFB9DC">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>0F5AE67C-622A-C26C-9FA1-55E5A36AF18C</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DatePosted" id="415327A0-1F74-B908-9CBE-4289B4FBC435">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>3A5DD7B9-8D8F-E041-CE26-366A0B29AF8C</importedID>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ACC957F3-F05A-FE62-3F4C-4F8F6B490E4D" name="REVIEW PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="8F6C6F91-90E9-B055-EC66-9BAE99DCC1C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0C7C3351-88CC-FCBE-2E70-3376DBE24C92</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

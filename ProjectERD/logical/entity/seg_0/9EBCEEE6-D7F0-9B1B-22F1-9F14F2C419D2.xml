@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9EBCEEE6-D7F0-9B1B-22F1-9F14F2C419D2" name="DATES_AVAILABLE">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="DateID" id="55CB1B2A-5BB1-658C-B641-3FCABF36C25E">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>A12E08ED-B0E0-2D5B-4C77-4CEA5E64C10A</importedID>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ListingID" id="F24A6FC4-1D4D-6FB5-3E2D-88FF226BCABE">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>769B9205-4F9A-899D-B908-402D25DFE6EB</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>F4B881EF-7218-B704-A426-6F1A173DA3F6</importedID>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="StartDate" id="A68D49BD-2E2A-025C-BF58-925225AFD32F">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>C602A863-0F3B-AEA0-04FD-DC901D0159FA</importedID>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EndDate" id="40D2B29B-227A-D191-0E0F-62643DC7CF00">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>20DA7C3B-2419-7EEA-43E8-1861536F31C7</importedID>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="926FCCEC-FD86-5692-4B90-53E1DDF7D325" name="DATES_AVAILABLE PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="B49A3119-D4BA-F5E8-5156-694889A4E90F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>55CB1B2A-5BB1-658C-B641-3FCABF36C25E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

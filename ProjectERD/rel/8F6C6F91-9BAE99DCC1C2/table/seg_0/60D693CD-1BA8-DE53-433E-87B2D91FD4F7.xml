@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="60D693CD-1BA8-DE53-433E-87B2D91FD4F7" name="AMENITY">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>77A9C779-6DAC-0814-66E5-FC1E1E48488F</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AmenitiesID" id="C03F7573-C62E-AC59-0484-A6D7A7F0E1F8">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>EC071285-76DA-5B9F-E37D-55A5A14C4B86</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="B72D05BE-CBB1-8B14-63F1-C0338783A285">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>D5611A2F-A2C0-E71F-38AC-15B1CCB6273E</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="529E0B7B-4896-E17D-9177-886210574377" name="AMENITY_PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-29 00:39:04 UTC</createdTime>
+<generatorID>5C063B27-7F01-089C-6DBB-5A045E24F3AA</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C03F7573-C62E-AC59-0484-A6D7A7F0E1F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77A9C779-6DAC-0814-66E5-FC1E1E48488F" name="AMENITY">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AmenitiesID" id="EC071285-76DA-5B9F-E37D-55A5A14C4B86">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>44784D31-8194-DC67-78FE-FE538B7B5AB7</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="D5611A2F-A2C0-E71F-38AC-15B1CCB6273E">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>4E8ACCD7-53D7-7693-1158-AEB941DF32C0</importedID>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C063B27-7F01-089C-6DBB-5A045E24F3AA" name="AMENITIES PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<engineerTo>
+<item key="A06EC98A-E53B-A03C-2FDF-B03A00D477FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EC071285-76DA-5B9F-E37D-55A5A14C4B86</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

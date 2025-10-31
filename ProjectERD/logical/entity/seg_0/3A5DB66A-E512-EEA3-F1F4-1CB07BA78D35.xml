@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3A5DB66A-E512-EEA3-F1F4-1CB07BA78D35" name="BOOKING">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="BookingID" id="ED999674-CE9D-FDAF-9D5A-D57CF324EB54">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>12D175A6-E727-C475-75A9-F5F2B0BC1A09</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CustomerID" id="80C4AECA-00B0-D54B-FBA0-639C51960411">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>773971E6-12CA-EA4F-065B-5C4E284CD6FD</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>0E57ADDF-03AD-9718-1472-1D496E2A8F30</importedID>
+<referedAttribute>280C178D-FC66-8ED4-67E6-C893F77406B9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ListingID" id="305AE4A6-3F85-D7BE-ACB9-9A19630582A9">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<generatorID>232624CD-EE36-E8B1-063B-144EF4C885F7</generatorID>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>ADED93D1-3467-71D3-8BCA-DD6658DEDB85</importedID>
+<referedAttribute>191C8D84-62C7-85BB-3526-7ADFB92459A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BookingDate" id="D95C9AE5-8B1C-81E0-4658-3C632EB5F877">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>3926A08A-8647-6CA5-3128-D0227ACC343F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PaymentMethod" id="1F4CDF6F-2CD0-0A01-6F07-51F0B85DD9D3">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<notes><![CDATA[can be: Credit Card, Debit Card, Apple Pay, PayPal, or Google Pay]]></notes>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>92AD22ED-8B5C-11E5-1BE5-660AAE55C34E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="StartDate" id="4C49D701-7F17-87DB-4B56-2601D723928D">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>77BB644D-B65B-3F06-5262-8E608893DE7A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EndDate" id="A3A62B52-0089-E5AC-446F-5CA18C40EF63">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<importedID>CF79E7D8-2096-6374-19FE-53FCD663CCB6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="88B0F7A0-9715-3C6C-FB41-A1913A64B203" name="BOOKING PK">
+<createdBy>samanthagrief</createdBy>
+<createdTime>2025-09-22 22:34:08 UTC</createdTime>
+<ownerDesignName>ProjectERD</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>ED999674-CE9D-FDAF-9D5A-D57CF324EB54</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
